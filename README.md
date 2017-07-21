@@ -1,5 +1,5 @@
 # About This Repo
-This repository is simply a basic setup that I want to have ready for multiple uses. This repo exclusively utilizes Node.js as the backend server and consists JavaScript, HTML, CSS for the frontend. No frontend frameworks setup included.
+This repository is simply a basic setup that I want to have ready for multiple uses. This repo exclusively utilizes Node.js as the backend server and consists JavaScript, HTML, CSS for the frontend. No frontend frameworks setup nor databases included.
 
 ## To Run The App
 
