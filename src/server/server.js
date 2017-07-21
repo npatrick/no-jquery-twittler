@@ -12,4 +12,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../public/')));
 
+app.get('/tweet-data', (req, res) => {
+  console.log('data gen requested');
+  return;
+});
+
 module.exports = app;

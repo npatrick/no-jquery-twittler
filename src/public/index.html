@@ -5,8 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="assets/css/style.css" rel="stylesheet">
+    <script src="assets/js/data_generator.js"></script>
   </head>
   <body>
     <h1>Hello World!</h1>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var $body = document.getElementsByTagName("body")[0];
+        $body.innerHTML = '';
+        var index = streams.home.length - 1;
+        while(index >= 0){
+          var tweet = streams.home[index];
+          var $tweet = document.createElement('div');
+          console.log('what is $tweet', $tweet);
+          var newContent = document.createTextNode('@' + tweet.user + ': ' + tweet.message);
+          $tweet.appendChild(newContent);
+          document.body.insertAdjacentElement('afterend', $tweet)
+          index -= 1;
+        }
+      });
+    </script>
   </body>
 </html>
