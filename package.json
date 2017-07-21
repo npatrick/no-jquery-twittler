@@ -1,0 +1,25 @@
+{
+  "name": "basic-setup",
+  "version": "1.0.0",
+  "description": "Super basic server setup with Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/npatrick/basic-setup.git"
+  },
+  "keywords": [
+    "node.js",
+    "html",
+    "js",
+    "css"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npatrick/basic-setup/issues"
+  },
+  "homepage": "https://github.com/npatrick/basic-setup#readme"
+}
