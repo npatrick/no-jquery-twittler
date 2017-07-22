@@ -18,9 +18,9 @@
           var tweet = streams.home[index];
           var $tweet = document.createElement('div');
           console.log('what is $tweet', $tweet);
-          var newContent = document.createTextNode('@' + tweet.user + ': ' + tweet.message);
+          var newContent = document.createTextNode('@' + tweet.user + ': ' + tweet.message + ' ' + index);
           $tweet.appendChild(newContent);
-          document.body.insertAdjacentElement('afterend', $tweet)
+          document.body.insertBefore($tweet, null);
           index -= 1;
         }
       });
