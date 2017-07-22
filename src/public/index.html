@@ -18,7 +18,7 @@
           var tweet = streams.home[index];
           var $tweet = document.createElement('div');
           console.log('what is $tweet', $tweet);
-          var newContent = document.createTextNode('@' + tweet.user + ': ' + tweet.message + ' ' + index);
+          var newContent = document.createTextNode('@' + tweet.user + ': ' + tweet.message);
           $tweet.appendChild(newContent);
           document.body.insertBefore($tweet, null);
           index -= 1;
