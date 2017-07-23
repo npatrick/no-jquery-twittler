@@ -8,19 +8,52 @@
     <script src="assets/js/data_generator.js"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <div class="top-bar">
+      <div class="navigation">
+        <ul>
+          <a href=''>
+          <li class='home'><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" />
+          Home</li>
+          </a>
+          <li><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/128/bell.png" />Notifications</li>
+          <li><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/128/message.png" />Messages</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-container">
+      <div class="user-profile">
+        <img src="http://pm1.narvii.com/6200/33293d82514d7c94e53d4fc1f744e28dee281798_128.jpg" />
+        <h2 class="username">Harambe</h2>
+        <h4 class="user-address">@harambae</h4>
+          <ul>
+            <li>Tweets</li>
+            <li>Following</li>
+            <li>Followers</li>
+          </ul>
+      </div>
+      
+      <div id="tweet-container"></div>
+
+      <div class="random-box">Miscellaneous</div>
+
+    </div>
+      
     <script>
       document.addEventListener("DOMContentLoaded", function(event) {
-        var $body = document.getElementsByTagName("body")[0];
-        $body.innerHTML = '';
+        // var $body = document.getElementsByTagName("body")[0];
+        // $body.innerHTML = '';
         var index = streams.home.length - 1;
+        var tweetContainer = document.getElementById('tweet-container');
         while(index >= 0){
           var tweet = streams.home[index];
-          var $tweet = document.createElement('div');
-          console.log('what is $tweet', $tweet);
+          var $tweetBox = document.createElement('div');
+          console.log('what is $tweetBox', $tweetBox);
           var newContent = document.createTextNode('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendChild(newContent);
-          document.body.insertBefore($tweet, null);
+          $tweetBox.appendChild(newContent);
+          $tweetBox.classList.add('tweet-box');
+          tweetContainer.insertBefore($tweetBox, null);
           index -= 1;
         }
       });
