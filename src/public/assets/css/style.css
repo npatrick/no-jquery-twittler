@@ -10,6 +10,7 @@ body {
   position: fixed;
   background-color: #fff;
   width: 100vw;
+  height: 6.5%;
   right: 1px;
   top: 1px;
   z-index: 1;
@@ -17,12 +18,18 @@ body {
 
 .navigation {
   display: inline-block;
-  margin: 0px 18% 10px 18%;
+  margin: -13px 18% 10px 18%;
+  height: inherit;
   background-color: #fff;
+}
+
+.navigation ul {
+  padding-left: 0px;
 }
 
 .navigation li {
   display: inline;
+  margin-right: 5%;
 }
 
 .info-container {
